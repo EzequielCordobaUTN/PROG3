@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>La Buena Mesa</title>
+</head>
+<body>
+  <header>
+    <h1>La Buena Mesa</h1>
+    <p>Comida casera, sabor auténtico</p>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Quiénes somos</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="ubicacion.html">Cómo llegar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main tabindex="0">
+    <section id="menu">
+      <h2>Menú del día</h2>
+      <article>
+        <h3>Milanesa con papas</h3>
+        <p>Clásica milanesa de carne servida con papas fritas.</p>
+      </article>
+      <article>
+        <h3>Ravioles caseros</h3>
+        <p>Ravioles de ricota y espinaca con salsa de tomate.</p>
+      </article>
+      <article>
+        <h3>Pizza napolitana</h3>
+        <p>Masa fina, salsa casera y mozzarella fresca.</p>
+      </article>
+    </section>
+
+    <hr>
+
+    <section id="nosotros">
+      <h2>Quiénes somos</h2>
+      <p>Somos un restaurante familiar con más de 15 años ofreciendo platos caseros y atención cálidad.</p>
+    </section>
+
+    <hr>
+
+    <section id="reservas">
+      <h2>Reserva tu mesa</h2>
+      <form>
+        <fieldset>
+          <legend>Datos de la reserva</legend>
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez"><br><br>
+
+          <label for="correo">Correo:</label>
+          <input type="email" id="correo" name="correo" required placeholder="Ej: correo@ejemplo.com"><br><br>
+
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required><br><br>
+
+          <label for="hora">Hora:</label>
+          <input type="time" id="hora" name="hora" required><br><br>
+
+          <label for="personas">Personas:</label>
+          <input type="number" id="personas" name="personas" min="1" max="20" required placeholder="Ej: 2"><br><br>
+
+          <label for="comentario">Comentario:</label><br>
+          <textarea id="comentario" name="comentario" rows="4" placeholder="Preferencia de ubicación, sin gluten..."></textarea><br><br>
+
+          <button type="submit">Reservar</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 La Buena Mesa - Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>
