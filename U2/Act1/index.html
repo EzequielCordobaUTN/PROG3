@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Trabajo Práctico 1 - CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <p>CSS es un lenguaje que me permite separar el contenido de la presentación en una página web. Sirve para definir colores, tipografías, márgenes y layouts, logrando que el diseño sea más ordenado y fácil de mantener.</p>
+
+  <p id="parrafo-id">Este párrafo usa selector por ID.</p>
+  <p class="parrafo-class">Este párrafo usa selector por CLASS.</p>
+  <p>Este párrafo usa selector por TAG.</p>
+
+  <h1 class="titulo">Título con sombra y mayúsculas</h1>
+  <p class="espaciado">Este párrafo tiene mayor interlineado y espaciado entre letras.</p>
+  <blockquote class="cita">"Esta es una cita con cursiva y otra fuente."</blockquote>
+
+  <div class="tarjeta">
+    <div class="cuadro"></div>
+    <h2>Tarjeta de Perfil</h2>
+    <p>Esta tarjeta muestra border, padding, margin, background-color, border-radius y box-shadow.</p>
+  </div>
+
+  <h2>Galería de Tarjetas</h2>
+
+  <h3>Display: block</h3>
+  <div class="galeria block">
+    <div class="card">Tarjeta 1</div>
+    <div class="card">Tarjeta 2</div>
+    <div class="card">Tarjeta 3</div>
+  </div>
+
+  <h3>Display: inline</h3>
+  <div class="galeria inline">
+    <div class="card">Tarjeta 1</div>
+    <div class="card">Tarjeta 2</div>
+    <div class="card">Tarjeta 3</div>
+  </div>
+
+  <h3>Display: inline-block</h3>
+  <div class="galeria inline-block">
+    <div class="card">Tarjeta 1</div>
+    <div class="card">Tarjeta 2</div>
+    <div class="card">Tarjeta 3</div>
+  </div>
+
+  <button class="oculto-none">Botón con display:none</button>
+  <button class="oculto-hidden">Botón con visibility:hidden</button>
+  <p>La diferencia es que <strong>display:none</strong> elimina el elemento del flujo del DOM, mientras que <strong>visibility:hidden</strong> lo oculta pero sigue ocupando espacio.</p>
+
+  <div class="tarjeta-variables">
+    <h2>Tarjeta con Variables CSS</h2>
+    <p>El color de fondo, texto y borde se controlan con variables en :root.</p>
+  </div>
+
+  <h2>Conclusiones</h2>
+  <p>Comprendí que CSS permite separar el contenido de la presentación y facilita el diseño web.</p>
+  <p>Aprendí a aplicar selectores por id, class y tag.</p>
+  <p>Experimenté con propiedades tipográficas y el modelo de caja.</p>
+  <p>Reconocí la diferencia entre los distintos valores de display y los efectos de visibility.</p>
+  <p>Implementé variables CSS para mantener consistencia y cambiar temas de colores rápidamente.</p>
+</body>
+</html>

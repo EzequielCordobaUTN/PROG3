@@ -1,0 +1,80 @@
+:root {
+  --color-fondo: #f0f0f0;
+  --color-texto: #333;
+  --color-acento: #0077cc;
+}
+
+#parrafo-id {
+  color: red;
+}
+.parrafo-class {
+  color: green;
+}
+p {
+  color: blue;
+}
+
+.titulo {
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px gray;
+}
+.espaciado {
+  line-height: 2;
+  letter-spacing: 4px;
+}
+.cita {
+  font-style: italic;
+  font-family: "Georgia", serif;
+}
+
+.tarjeta {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 15px;
+  background-color: lightyellow;
+  border-radius: 10px;
+  box-shadow: 4px 4px 8px gray;
+  width: 250px;
+}
+.cuadro {
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  margin-bottom: 10px;
+}
+
+.galeria.block .card {
+  display: block;
+  margin: 5px;
+  background: lightblue;
+}
+.galeria.inline .card {
+  display: inline;
+  margin: 5px;
+  background: lightgreen;
+}
+.galeria.inline-block .card {
+  display: inline-block;
+  margin: 5px;
+  background: lightpink;
+  width: 100px;
+  height: 50px;
+}
+
+.oculto-none {
+  display: none;
+}
+.oculto-hidden {
+  visibility: hidden;
+}
+
+.tarjeta-variables {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border: 2px solid var(--color-acento);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+}
+
+

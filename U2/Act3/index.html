@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TP Integrador CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#top" class="site-header__logo" aria-label="Inicio">
+      <span class="site-header_mark" aria-hidden="true">M</span>
+      <span>MiTienda</span>
+    </a>
+    <nav class="site-header__nav">
+      <a href="#novedades">Novedades</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="site-header__menu" aria-label="Menú">
+      <img src="img/menu-2.png" alt="Menú">
+    </button>
+  </header>
+
+  <main>
+    <!-- Bloque 1: Sistema de Botones -->
+    <section class="container panel">
+      <h2>1) Sistema de Botones</h2>
+      <div class="btn-group">
+        <button class="btn btn--primary">Primario</button>
+        <button class="btn btn--secondary">Secundario</button>
+        <button class="btn btn--outline">Outline</button>
+        <button class="btn btn--danger">Peligro</button>
+        <button class="btn btn--icon">
+          <img src="img/search.png" alt="Buscar"> Buscar
+        </button>
+        <button class="btn" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <section class="container panel">
+      <h2>2) Tarjeta de Producto</h2>
+      <article class="product-card">
+        <div class="product-card__media">
+          <span class="product-card__badge">Nuevo</span>
+          <img src="img/zapatillas.webp" alt="Zapatillas Runner Pro">
+        </div>
+        <div class="product-card__info">
+          <h2>Zapatillas Runner Pro</h2>
+          <p>Amortiguación ligera, malla respirable y suela antideslizante. Perfectas para entrenar todos los días.</p>
+          <div class="product-card__price">
+            <span class="price">$24.999</span>
+            <span class="old-price">$29.999</span>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn btn--primary">Comprar ahora</button>
+            <button class="btn btn--success">
+              <img src="img/plus.png" alt="Añadir"> Añadir
+            </button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="novedades" class="container panel">
+      <h2>Novedades</h2>
+      <p class="code-note">Sección de relleno para probar el menú.</p>
+    </section>
+
+    <section id="ofertas" class="container panel">
+      <h2>Ofertas</h2>
+      <p class="code-note">Otra sección de relleno.</p>
+    </section>
+
+    <section id="contacto" class="container panel">
+      <h2>Contacto</h2>
+      <p class="code-note">Más contenido de ejemplo.</p>
+    </section>
+  </main>
+</body>
+</html>
+
+
+
