@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trabajo Práctico JS – Funciones, Objetos, DOM y Eventos</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; color: #222; }
+  h1 { color: #1e3a8a; }
+  section { border: 1px solid #ddd; padding: 14px; margin: 14px 0; border-radius: 8px; background: #fafafa; }
+  section h2 { margin-top: 0; color: #1e40af; }
+  .destacado { color: #dc2626; font-weight: bold; }
+  input, button, select { padding: 6px 10px; margin: 4px; font-size: 14px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  .exp { font-size: 13px; color: #444; background: #eef2ff; padding: 8px; border-radius: 6px; }
+  code { background: #e5e7eb; padding: 2px 4px; border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<h1 id="titulo">Lista de tareas</h1>
+<p id="intro">Aplicación interactiva del Trabajo Práctico: funciones, objetos, desestructuración, spread/rest, DOM y eventos.</p>
+
+<!-- Punto 1: Funciones declarativas y expresadas -->
+<section id="p1">
+  <h2>Punto 1 – Funciones declarativas y expresadas</h2>
+  <p id="outCua"></p>
+  <p id="outCub"></p>
+  <p class="exp">Explicación: una función declarativa se define con la palabra clave <code>function</code> y se "hoistea" (se puede usar antes de su declaración). Una función expresada se asigna a una variable; no se hoistea y solo existe después de esa línea. Se usan declarativas para funciones generales/reutilizables y expresadas cuando se quiere tratar la función como valor (callbacks, asignaciones condicionales).</p>
+</section>
+
+<!-- Punto 2: Arrow functions y parámetros por defecto -->
+<section id="p2">
+  <h2>Punto 2 – Arrow function con parámetro por defecto</h2>
+  <p id="outSaludo1"></p>
+  <p id="outSaludo2"></p>
+  <p class="exp">Explicación: la arrow function <code>(nombre, edad = 18)</code> usa un parámetro por defecto, por eso si no se pasa la edad toma 18. Las arrow functions tienen sintaxis más corta y no tienen su propio <code>this</code>.</p>
+</section>
+
+<!-- Punto 3: Objetos con propiedades y métodos -->
+<section id="p3">
+  <h2>Punto 3 – Objeto persona</h2>
+  <p id="outPresentacion"></p>
+  <p class="exp">Explicación: las propiedades guardan datos (nombre, edad) y los métodos son funciones asociadas al objeto que operan sobre esos datos (presentar). Propiedades = estado/valores; métodos = comportamiento/acciones.</p>
+</section>
+
+<!-- Punto 4: Desestructuración -->
+<section id="p4">
+  <h2>Punto 4 – Desestructuración</h2>
+  <p id="outDes1"></p>
+  <p id="outDes2"></p>
+  <p class="exp">Explicación: la desestructuración permite extraer propiedades del objeto en variables con una sola línea, haciendo el código más limpio y legible que acceder a cada <code>persona.nombre</code>, etc. También evita repetición y es útil en parámetros de funciones.</p>
+</section>
+
+<!-- Punto 5: Spread / Rest -->
+<section id="p5">
+  <h2>Punto 5 – Operador spread y rest</h2>
+  <p id="outSpread"></p>
+  <p id="outSuma"></p>
+  <p class="exp">Explicación: spread (<code>...</code>) "expande" un iterable en elementos sueltos (copiar/combinar arrays). rest (<code>...</code>) en parámetros de función "agrupa" los argumentos restantes en un array. Mismo símbolo, uso opuesto según el contexto.</p>
+</section>
+
+<!-- Punto 6 a 9: DOM y eventos -->
+<section id="p6">
+  <h2>Punto 6 – Manipulación básica del DOM</h2>
+  <ul id="lista">
+    <li>Comprar pan</li>
+    <li>Estudiar JavaScript</li>
+    <li>Hacer ejercicio</li>
+  </ul>
+  <p class="exp">Se selecciona el título con <code>getElementById</code> y se cambia su texto con <code>textContent</code>; se agregan <code>&lt;li&gt;</code> con <code>createElement</code>+<code>appendChild</code>; y se alternan clases con <code>classList</code>.</p>
+</section>
+
+<section id="p7">
+  <h2>Punto 7 – Eventos click e input</h2>
+  <div>
+    <input id="inputTarea" type="text" placeholder="Escribe una tarea">
+    <button id="btnAgregar" type="button">Agregar tarea</button>
+  </div>
+  <p id="livePreview">Vista previa: </p>
+  <p class="exp">Se usa el evento <code>click</code> en el botón para agregar el texto del input a la lista. También se usa el evento <code>input</code> para actualizar la vista previa en tiempo real mientras se escribe.</p>
+</section>
+
+<section id="p8">
+  <h2>Punto 8 – Evento submit y preventDefault</h2>
+  <form id="formulario">
+    <input id="inputForm" type="text" placeholder="Escribe y envía">
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="msgForm"></p>
+  <p class="exp"><code>preventDefault()</code> evita el comportamiento por defecto del envío del formulario (recargar la página), permitiendo manejar los datos con JavaScript.</p>
+</section>
+
+<section id="p9">
+  <h2>Punto 9 – Eventos keydown y change</h2>
+  <select id="selector">
+    <option value="">-- elegí un color --</option>
+    <option value="Rojo">Rojo</option>
+    <option value="Verde">Verde</option>
+    <option value="Azul">Azul</option>
+  </select>
+  <p id="msgSelect">Opción seleccionada: (ninguna)</p>
+  <p class="exp">Con <code>keydown</code> se detecta cuando se presiona Enter en el input para agregar la tarea. Con <code>change</code> se detecta cuando cambia la selección del <code>&lt;select&gt;</code>. Diferencia: <code>input</code> se dispara en cada pulsación, <code>change</code> al confirmar el cambio, y <code>keydown</code> al presionar una tecla.</p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

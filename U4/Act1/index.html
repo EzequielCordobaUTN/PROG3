@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Simpsons API</title>
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<header>
+  <h1>The Simpsons API</h1>
+  <p>Explora personajes de Los Simpsons con sus imágenes y frases célebres.</p>
+</header>
+
+<main>
+  <section id="controls" class="controls">
+    <button id="loadButton" type="button">Cargar Personajes</button>
+  </section>
+
+  <section id="loading" class="loading hidden">
+    <div class="spinner" aria-hidden="true"></div>
+    <p>Cargando personajes...</p>
+  </section>
+
+  <div id="error" class="error hidden" role="alert"></div>
+
+  <section id="characters" class="characters"></section>
+</main>
+
+<footer>
+  <a href="https://thesimpsonsapi.com/" target="_blank" rel="noopener noreferrer">Documentación de la API</a>
+</footer>
+
+<script type="module" src="./dist/main.js"></script>
+</body>
+</html>

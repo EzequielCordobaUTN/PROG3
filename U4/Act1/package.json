@@ -1,0 +1,14 @@
+{
+  "name": "simpsons-api-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Consumo de The Simpsons API con TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
