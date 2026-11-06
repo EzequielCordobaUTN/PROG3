@@ -1,0 +1,44 @@
+INSTRUCCIONES DEL PROYECTO
+==========================
+
+1) PERSISTENCE.XML (conexion a la base de datos)
+------------------------------------------------
+Ubicacion:
+  C:\Users\ezema\Desktop\Universidad\T3\Programacion III\Actividades\U10\Act1\Act1-java\src\main\resources\META-INF\persistence.xml
+
+Propiedades a cambiar segun tu servidor/usuario:
+  - jakarta.persistence.jdbc.url      (host/puerto/base)
+  - jakarta.persistence.jdbc.user     (usuario/root)
+  - jakarta.persistence.jdbc.password (contrasena)
+  - jakarta.persistence.jdbc.driver   (driver, normalmente org.postgresql.Driver)
+
+Ejemplo:
+  <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/Act1-java"/>
+  <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+  <property name="jakarta.persistence.jdbc.password" value="004117"/>
+
+Nota: si el proyecto usa javax.* en lugar de jakarta.*, cambia los mismos campos con ese prefijo.
+
+2) USO VITAL DE LOS ARCHIVOS .SQL (base de datos)
+-------------------------------------------------
+Ubicacion de scripts:
+  - db\create_db.sql (crea la base Act1-java)
+
+Importante:
+  - Ejecutar estos .sql antes de correr la aplicacion (especialmente create_db.sql).
+  - hbm2ddl.auto=update crea/actualiza tablas, pero la base de datos debe existir.
+  - Si cambias usuario/contrasena, asegurate de que ese usuario tenga permisos sobre la BD.
+
+3) MAIN (punto de entrada)
+---------------------------
+Ubicacion del main:
+  C:\Users\ezema\Desktop\Universidad\T3\Programacion III\Actividades\U10\Act1\Act1-java\src\main\java\com\mycompany\act1\Main.java
+
+Clase main:
+  com.mycompany.act1.Main
+
+Como ejecutar:
+  cd "C:\Users\ezema\Desktop\Universidad\T3\Programacion III\Actividades\U10\Act1\Act1-java"
+  mvn clean compile exec:java
+
+Si usas IDE (NetBeans/VS Code): Clean and Build antes de Run.

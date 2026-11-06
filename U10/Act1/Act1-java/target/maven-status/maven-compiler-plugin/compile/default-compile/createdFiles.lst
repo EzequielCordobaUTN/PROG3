@@ -1,0 +1,7 @@
+com\mycompany\act1\entity\HistoriaClinica.class
+com\mycompany\act1\entity\Medicamento.class
+com\mycompany\act1\Main.class
+com\mycompany\act1\entity\BaseEntity.class
+com\mycompany\act1\entity\Medico.class
+com\mycompany\act1\entity\Consulta.class
+com\mycompany\act1\entity\Paciente.class

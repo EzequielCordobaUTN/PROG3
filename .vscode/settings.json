@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "U7\\Act1",
+        "U7\\Act2",
+        "U7\\Act3",
+        "U7\\Act4"
+    ],
+    "java.project.referencedLibraries": [
+        "lombok.jar"
+    ]
+}
